@@ -11,8 +11,13 @@ class Transaksi extends Model
 
     protected $fillable = [
         'resi',
-        'quantity',
+        'total',
         'status',
     ];
-    
+
+    public function detailTransaksi()
+    {
+        return $this->hasMany(DetailTransaksi::class);
+    }
+
 }

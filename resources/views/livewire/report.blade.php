@@ -1,5 +1,4 @@
-@extends('layout.head')
-<body>
+
     @section('title', 'All Products')
     <section class="py-4">
         @include('layout.nav')
@@ -83,5 +82,7 @@
         </div>
     </section>
     @include('layout.successModalScript')
-</body>
-</html>
+
+
+
+

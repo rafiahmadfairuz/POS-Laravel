@@ -9,7 +9,7 @@ return new class extends Migration {
     {
         Schema::create('customers', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('customer_group_id')->constrained();
+            $table->foreignId('customer_group_id')->constrained('customer_groups');
             $table->string('firstName');
             $table->string('lastName');
             $table->string('company');

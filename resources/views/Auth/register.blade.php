@@ -19,26 +19,26 @@
                 <form action="{{ route('store.register') }}" method="POST">
                     @csrf
                     <div class="group gas">
-                        <div>
+                        <div  class="ig">
                         <input type="text" name="first_name" autocomplete="off" placeholder="First Name" value="{{ old('first_name') }}">
                         @error('first_name')
-                          <p class="eror">{{ $message }}</p>   
+                          <p class="eror">{{ $message }}</p>
                         @enderror
                         </div>
-                        <div>
+                        <div class="ig">
                         <input type="text" name="last_name" autocomplete="off" placeholder="Last Name" value="{{ old('last_name') }}">
                         @error('last_name')
-                          <p class="eror">{{ $message }}</p>   
+                          <p class="eror">{{ $message }}</p>
                         @enderror
                         </div>
                     </div>
                     <input type="email" name="email" placeholder="Email" value="{{ old('email') }}">
                     @error('email')
-                    <p class="eror">{{ $message }}</p>   
+                    <p class="eror">{{ $message }}</p>
                     @enderror
                     <input type="password" name="password" placeholder="Password">
                     @error('password')
-                    <p class="eror">{{ $message }}</p>   
+                    <p class="eror">{{ $message }}</p>
                     @enderror
                     <div class="group">
                         <button type="reset">Reset</button>
@@ -47,7 +47,7 @@
                 </form>
 
             </div>
-         
+
         </div>
     </div>
 </body>
