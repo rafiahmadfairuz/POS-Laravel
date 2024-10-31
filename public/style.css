@@ -45,7 +45,7 @@
     content: '';
     position: absolute;
     top: 0;
-    right: -500px;
+    right: -420px;
     bottom: 0;
     width: 50%;
     background: linear-gradient(to left, rgba(45, 55, 72, 0) 0%, rgba(45, 55, 72, 1) 60%); /* Gradient memudar */

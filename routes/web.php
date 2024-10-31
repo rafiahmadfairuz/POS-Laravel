@@ -78,10 +78,12 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 });
 
-
-// Register
+Route::middleware(['guest'])->group(function () {
+    // Register
 Route::get('/register', [AuthController::class,'register'])->name('register');
 Route::post('/register', [AuthController::class,'storeRegister'])->name('store.register');
 // Login
 Route::get('/login', [AuthController::class,'index'])->name('login');
 Route::post('/login', [AuthController::class,'authenticate'])->name('store.login');
+});
+

@@ -21,7 +21,7 @@ class AuthController extends Controller
          $validasi = $request->validate([
              'first_name' => 'required|min:4',
              'last_name' => 'required|min:4',
-             'email' => 'email:dns|unique:users',
+             'email' => 'email|unique:users',
              'password' => 'required|min:4'
          ]);
 
@@ -39,7 +39,7 @@ class AuthController extends Controller
     public function authenticate(Request $request)
     {
         $pencocokan = $request->validate([
-           'email' => 'required|email:dns',
+           'email' => 'required|email',
            'password' => 'required|min:4'
         ]);
 
