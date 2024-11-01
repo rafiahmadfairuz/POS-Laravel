@@ -1,6 +1,5 @@
-@extends('layout.head')
+<x-app>
 
-<body>
     @section('title', 'Product | Update Unit')
 
     <section class="py-4 px-8">
@@ -32,6 +31,7 @@
         </div>
     </section>
 
-</body>
 
-</html>
+</x-app>
+
+

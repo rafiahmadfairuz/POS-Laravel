@@ -1,6 +1,4 @@
-@extends('layout.head')
-
-<body>
+<x-app>
     @section('title', 'Product | Inventory')
 
     <section class="py-4 px-8">
@@ -13,13 +11,10 @@
                             <ul
                                 class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white">
                                 <li>
-                                    <a href="{{ route('Dashboard.index') }}"
-                                        class="block py-2 px-3 text-gray-900 rounded md:bg-transparent md:p-0"
-                                        aria-current="page">Home</a>
+                                    <x-link href="{{ route('Dashboard.index') }}">Home</x-link>
                                 </li>
                                 <li>
-                                    <a href="{{ route('Product.index') }}"
-                                        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0">Products</a>
+                                  <x-link href="{{ route('Product.index') }}">Products</x-link>
                                 </li>
                             </ul>
                         </div>
@@ -111,6 +106,4 @@
         </div>
     </section>
 
-</body>
-
-</html>
+</x-app>

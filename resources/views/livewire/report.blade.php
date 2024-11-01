@@ -1,7 +1,6 @@
-
-    @section('title', 'All Products')
+   @section('title', 'All Products')
     <section class="py-4">
-        @include('layout.nav')
+        <x-nav></x-nav>
         <!-- container -->
         <!-- Modal -->
         @include('layout.successModal')

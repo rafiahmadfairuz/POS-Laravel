@@ -1,9 +1,9 @@
-@extends('layout.head')
+<x-app>
 
-<body>
     @section('title', 'Products | Category')
     <section class="py-4">
-        @include('layout.nav')
+        <x-nav></x-nav>
+
         <!-- container -->
         <!-- Modal -->
         @include('layout.successModal')
@@ -56,6 +56,6 @@
         </div>
     </section>
     @include('layout.successModalScript')
-</body>
 
-</html>
+
+</x-app>

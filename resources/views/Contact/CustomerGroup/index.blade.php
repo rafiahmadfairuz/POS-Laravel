@@ -1,9 +1,7 @@
-@extends('layout.head')
-
-<body>
+<x-app>
     @section('title', 'Customer Groups')
     <section class="py-4">
-        @include('layout.nav')
+       <x-nav></x-nav>
         <!-- Modal -->
         @include('layout.successModal')
         <!-- container -->
@@ -114,6 +112,6 @@
         </div>
     </section>
     @include('layout.successModalScript')
-</body>
 
-</html>
+
+</x-app>
