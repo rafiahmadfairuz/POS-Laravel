@@ -14,7 +14,7 @@ return new class extends Migration {
             $table->foreignId('group_id')->constrained('groups')->onDelete('cascade');
             $table->foreignId('unit_id')->constrained('units')->onDelete('cascade');
             $table->string('name');
-            $table->string('image')->nullable();
+            $table->text('image')->nullable();
             $table->string('sku')->unique();
             $table->text('description')->nullable();
             $table->string('product_type');
