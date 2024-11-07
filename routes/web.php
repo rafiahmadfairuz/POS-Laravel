@@ -13,6 +13,10 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\InventoryController;
 use App\Http\Controllers\PembelianController;
 use App\Http\Controllers\CustomerGroupController;
+use App\Livewire\Customer\DisplayProduk as CustomerDisplayProduk;
+use App\Livewire\Customer\FullProduct;
+use App\Livewire\Customer\Keranjang;
+use App\Livewire\DisplayProduk;
 use App\Livewire\Report;
 use App\Livewire\Transaksi;
 
@@ -76,6 +80,13 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/purchases-form', Transaksi::class)->name('transaksi.baru');
 
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+
+    // Customer
+    Route::get('/display-produk', CustomerDisplayProduk::class)->name('display.produk');
+    Route::get('/full-produk', FullProduct::class)->name('full.produk');
+    Route::get('/cart', Keranjang::class)->name('cart.produk');
+    // Route::get('/detail', Keranjang::class)->name('cart.produk');
 });
 
 Route::middleware(['guest'])->group(function () {
